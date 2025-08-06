@@ -1,13 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development</title>
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+        .github-link {
+            background: #555;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        article {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        aside {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenidos a mi pagina web</h1>
-    <h2>Hola mundo !!!</h2>
-    <p>Este es un parrafo</p>
+    <header>
+        <h1>Bienvenidos a mi página web</h1>
+        <h2>Hola mundo !!!</h2>
+    </header>
+
+    <nav>
+        <div class="nav-left">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <a href="https://github.com/FabianMP004" target="_blank" class="github-link">Mi GitHub</a>
+    </nav>
+
+    <main>
+        <div>
+            <section id="inicio">
+                <h2>Inicio</h2>
+                <article>
+                    <h3>Bienvenido</h3>
+                    <p>Esta es mi página web personal donde comparto información sobre mis proyectos y experiencia.</p>
+                </article>
+            </section>
+
+            <section id="sobre-mi">
+                <h2>Sobre Mí</h2>
+                <article>
+                    <h3>Mi Historia</h3>
+                    <p>Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo.</p>
+                </article>
+                <article>
+                    <h3>Mis Intereses</h3>
+                    <p>Me interesa el desarrollo web, la programación y las nuevas tecnologías.</p>
+                </article>
+            </section>
+
+            <section id="proyectos">
+                <h2>Proyectos</h2>
+                <article>
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del primer proyecto.</p>
+                </article>
+                <article>
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del segundo proyecto.</p>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <h3>Información Adicional</h3>
+            <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
+            <ul>
+                <li>Enlace útil 1</li>
+                <li>Enlace útil 2</li>
+                <li>Enlace útil 3</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
