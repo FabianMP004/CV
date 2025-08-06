@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/Web Development/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Web Development/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/Web Development/images/apple-touch-icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -109,6 +110,25 @@
             background: #777;
         }
         .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+        .download-button {
+            background: #20b2aa;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background: #1a9a94;
+        }
+        .download-icon {
             width: 16px;
             height: 16px;
         }
@@ -245,11 +265,60 @@
                 <li>Enlace útil 2</li>
                 <li>Enlace útil 3</li>
             </ul>
+            <a href="#" onclick="generatePDF()" class="download-button">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/download.svg" alt="Descargar CV" class="download-icon">
+                Descargar CV
+            </a>
         </aside>
     </main>
 
     <footer>
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function generatePDF() {
+            // Crear una copia del contenido para el PDF
+            const originalContent = document.body.cloneNode(true);
+            
+            // Crear un contenedor temporal para el PDF
+            const pdfContainer = document.createElement('div');
+            pdfContainer.style.cssText = `
+                background: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+            `;
+            
+            // Obtener solo el contenido principal (sin nav y footer)
+            const header = originalContent.querySelector('header');
+            const main = originalContent.querySelector('main');
+            
+            // Añadir contenido al contenedor PDF
+            if (header) pdfContainer.appendChild(header.cloneNode(true));
+            if (main) pdfContainer.appendChild(main.cloneNode(true));
+            
+            // Configuración del PDF
+            const opt = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: 'Fabian_Miranda_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'a4', 
+                    orientation: 'portrait' 
+                }
+            };
+            
+            // Generar y descargar el PDF
+            html2pdf().set(opt).from(pdfContainer).save();
+        }
+    </script>
 </body>
 </html>
