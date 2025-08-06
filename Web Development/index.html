@@ -1,13 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development</title>
+    <title>Faban Miranda Prado</title>
+    <link rel="icon" type="image/svg+xml" href="/Web Development/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/Web Development/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Web Development/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Web Development/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Web Development/images/apple-touch-icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .hero-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-title {
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .hero-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .contact-button {
+            background: #20b2aa;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .nav-left {
+            display: flex;
+            gap: 20px;
+        }
+        .github-link {
+            background: #555;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #555;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .social-link:hover {
+            background: #777;
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+        .download-button {
+            background: #20b2aa;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background: #1a9a94;
+        }
+        .download-icon {
+            width: 16px;
+            height: 16px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        article {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        aside {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenidos a mi pagina web</h1>
-    <h2>Hola mundo !!!</h2>
-    <p>Este es un parrafo</p>
+    <header>
+        <div class="hero-section">
+            <img src="/Web Development/images/Foto Perfil.png" alt="Fabian Miranda" class="profile-image">
+            <div class="hero-content">
+                <div class="hero-title">Desarrollador / Programador</div>
+                <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-left">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/FabianMP004" target="_blank" class="social-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub" class="social-icon">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                LinkedIn
+            </a>
+            <a href="mailto:fabianmiranda2205@gmail.com" class="social-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Email" class="social-icon">
+                Email
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            <section id="inicio">
+                <h2>Inicio</h2>
+                <article>
+                    <h3>Bienvenido</h3>
+                    <p>Esta es mi página web personal donde comparto información sobre mis proyectos y experiencia.</p>
+                </article>
+            </section>
+
+            <section id="sobre-mi">
+                <h2>Sobre Mí</h2>
+                <article>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación</li>
+                        <li>Adaptabilidad</li>
+                        <li>Resolución de problemas</li>
+                        <li>Gestión del tiempo</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Lenguajes de Programación</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Tecnologias</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Postman</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>SQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="proyectos">
+                <h2>Proyectos</h2>
+                <article>
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del primer proyecto.</p>
+                </article>
+                <article>
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del segundo proyecto.</p>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <h3>Información Adicional</h3>
+            <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
+            <ul>
+                <li>Enlace útil 1</li>
+                <li>Enlace útil 2</li>
+                <li>Enlace útil 3</li>
+            </ul>
+            <a href="#" onclick="generatePDF()" class="download-button">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/download.svg" alt="Descargar CV" class="download-icon">
+                Descargar CV
+            </a>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function generatePDF() {
+            // Crear una copia del contenido para el PDF
+            const originalContent = document.body.cloneNode(true);
+            
+            // Crear un contenedor temporal para el PDF
+            const pdfContainer = document.createElement('div');
+            pdfContainer.style.cssText = `
+                background: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+            `;
+            
+            // Obtener solo el contenido principal (sin nav y footer)
+            const header = originalContent.querySelector('header');
+            const main = originalContent.querySelector('main');
+            
+            // Añadir contenido al contenedor PDF
+            if (header) pdfContainer.appendChild(header.cloneNode(true));
+            if (main) pdfContainer.appendChild(main.cloneNode(true));
+            
+            // Configuración del PDF
+            const opt = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: 'Fabian_Miranda_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'a4', 
+                    orientation: 'portrait' 
+                }
+            };
+            
+            // Generar y descargar el PDF
+            html2pdf().set(opt).from(pdfContainer).save();
+        }
+    </script>
 </body>
 </html>
