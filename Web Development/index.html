@@ -43,6 +43,28 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #555;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .social-link:hover {
+            background: #777;
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
         main {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -89,7 +111,16 @@
             <a href="#proyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </div>
-        <a href="https://github.com/FabianMP004" target="_blank" class="github-link">Mi GitHub</a>
+        <div class="social-links">
+            <a href="https://github.com/FabianMP004" target="_blank" class="social-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub" class="social-icon">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                LinkedIn
+            </a>
+        </div>
     </nav>
 
     <main>
