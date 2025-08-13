@@ -132,6 +132,41 @@
             width: 16px;
             height: 16px;
         }
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .education-table th {
+            background: #20b2aa;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .education-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .education-table tr:hover {
+            background-color: #f8f8f8;
+        }
+        .education-table tr:last-child td {
+            border-bottom: none;
+        }
+        .education-table caption {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
         main {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -180,8 +215,7 @@
         <div class="nav-left">
             <a href="#inicio">Inicio</a>
             <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="educacion">Educacion</a>
         </div>
         <div class="social-links">
             <a href="https://github.com/FabianMP004" target="_blank" class="social-link">
@@ -244,16 +278,30 @@
                 </article>
             </section>
 
-            <section id="proyectos">
-                <h2>Proyectos</h2>
-                <article>
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción del primer proyecto.</p>
-                </article>
-                <article>
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del segundo proyecto.</p>
-                </article>
+            <section id="educacion">
+                <h2>Educacion</h2>
+                <table class="education-table">
+                    <caption>Tabla de Educación</caption> <!--caption que muestra el titulo de la tabla-->
+                    <thead> <!--head de la tabla-->
+                        <tr> <!--columnas de la tabla-->
+                            <th>Año</th>
+                            <th>Institución</th>
+                            <th>Título Obtenido</th>
+                        </tr>
+                    </thead>
+                    <tbody> <!--cuerpo de la tabla-->
+                        <tr>
+                            <td>2023 - Presente</td>
+                            <td>Universidad Francisco Marroquín</td>
+                            <td>Ingeniería en Ciencias de la Computación con especialización en Administración de Operaciones</td>
+                        </tr>
+                        <tr>
+                            <td>2011 - 2022</td>
+                            <td>Centro Escolar el Roble</td>
+                            <td>Bachillerato Internacional y Bachillerato en Ciencias y Letras</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
 
