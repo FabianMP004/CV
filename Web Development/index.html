@@ -132,6 +132,41 @@
             width: 16px;
             height: 16px;
         }
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .education-table th {
+            background: #20b2aa;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .education-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .education-table tr:hover {
+            background-color: #f8f8f8;
+        }
+        .education-table tr:last-child td {
+            border-bottom: none;
+        }
+        .education-table caption {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
         main {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -164,6 +199,7 @@
             margin-top: 20px;
         }
     </style>
+
 </head>
 <body>
     <header>
@@ -180,8 +216,8 @@
         <div class="nav-left">
             <a href="#inicio">Inicio</a>
             <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#educacion">Educación</a>
+            <a href="#experiencia">Experiencia</a>
         </div>
         <div class="social-links">
             <a href="https://github.com/FabianMP004" target="_blank" class="social-link">
@@ -244,17 +280,63 @@
                 </article>
             </section>
 
-            <section id="proyectos">
-                <h2>Proyectos</h2>
-                <article>
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción del primer proyecto.</p>
-                </article>
-                <article>
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del segundo proyecto.</p>
-                </article>
-            </section>
+                         <section id="educacion">
+                 <h2>Educación</h2>
+                 <table class="education-table">
+                     <caption>Formación Académica y Títulos Obtenidos</caption>
+                     <thead>
+                         <tr>
+                             <th scope="col">Período</th>
+                             <th scope="col">Institución</th>
+                             <th scope="col">Título</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>2023 - Presente</td>
+                             <td>Universidad Francisco Marroquín</td>
+                             <td>Ingeniería en Ciencias de la Computación</td>
+                         </tr>
+                         <tr>
+                             <td>2011 - 2022</td>
+                             <td>Centro Escolar el Roble</td>
+                             <td>Bachillerato Internacional</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </section>
+
+                         <section id="experiencia">
+                 <h2>Experiencia Laboral</h2>
+                 <table class="education-table">
+                     <caption>Historial Profesional y Cargos Desempeñados</caption>
+                     <thead>
+                         <tr>
+                             <th scope="col">Período</th>
+                             <th scope="col">Empresa</th>
+                             <th scope="col">Cargo</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                             <td>Nov 2024 - Dic 2024</td>
+                             <td>Photoland GT</td>
+                             <td>Encargado de Caja</td>
+                         </tr>
+                         <tr>
+                             <td>Nov 2023 - Dic 2023</td>
+                             <td>Artek</td>
+                             <td>Asesor de Ventas</td>
+                         </tr>
+                         <tr>
+                             <td>Ene 2021 - Ago 2024</td>
+                             <td>Artek</td>
+                             <td>Encargado de Operaciones</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </section>
+
         </div>
 
         <aside>
