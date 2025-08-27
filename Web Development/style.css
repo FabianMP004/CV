@@ -1,0 +1,1213 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a2a1a;
+    color: #ffffff;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header y hero section */
+header {
+    background: #2a3a2a;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-title {
+    color: #32cd32;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.cta-button.primary {
+    background: #32cd32;
+    color: #ffffff;
+    border-color: #32cd32;
+}
+
+.cta-button.primary:hover {
+    background: transparent;
+    color: #32cd32;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #32cd32;
+    border-color: #32cd32;
+}
+
+.cta-button.secondary:hover {
+    background: #32cd32;
+    color: #ffffff;
+}
+
+.hero-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #32cd32;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.hero-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.availability-text {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.availability-dot {
+    width: 12px;
+    height: 12px;
+    background: #32cd32;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Sección de herramientas */
+.tools-section {
+    background: #2a3a2a;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.tools-section h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    flex: 0 1 120px;
+    min-height: 120px;
+}
+
+.tool-icon {
+    width: 80px;
+    height: 80px;
+    background: #2a3a2a;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tool-icon:hover {
+    background: #32cd32;
+    transform: translateY(-5px);
+    border-color: #32cd32;
+}
+
+.tool-icon i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.tool-name {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sección educación y experiencia */
+.education-experience {
+    background: #2a3a2a;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.education-experience h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.education-experience-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.education, .experience {
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.education h3, .experience h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.institution, .company {
+    color: #32cd32;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos existentes actualizados */
+nav {
+    background: #2a3a2a;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #32cd32;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.github-link {
+    background: #32cd32;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: transparent;
+    color: #32cd32;
+    border: 2px solid #32cd32;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #2a3a2a;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.social-link:hover {
+    background: #32cd32;
+    color: #ffffff;
+    border-color: #32cd32;
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+.download-button {
+    background: #32cd32;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: 2px solid #32cd32;
+}
+
+.download-button:hover {
+    background: transparent;
+    color: #32cd32;
+}
+
+.download-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #2a3a2a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.education-table th {
+    background: #32cd32;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.education-table td {
+    padding: 15px;
+    border-bottom: 1px solid #2a3a2a;
+    color: #ffffff;
+}
+
+.education-table tr:hover {
+    background-color: #2a3a2a;
+}
+
+.education-table tr:last-child td {
+    border-bottom: none;
+}
+
+.education-table caption {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    grid-template-areas: 
+        "content sidebar";
+}
+
+main > div {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+    background: #2a3a2a;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+section {
+    background: #2a3a2a;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+section h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+article {
+    background: #2a3a2a;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #32cd32;
+}
+
+article h3 {
+    color: #32cd32;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+article p, article li {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+aside {
+    background: #2a3a2a;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+aside h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+aside p, aside li {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Botones de redes sociales en información adicional */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background: #2a3a2a;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+}
+
+.social-btn:hover {
+    background: #32cd32;
+    color: #ffffff;
+    border-color: #32cd32;
+    transform: translateY(-2px);
+}
+
+.social-btn i {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.social-btn span {
+    font-size: 14px;
+}
+
+footer {
+    background: #2a3a2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Responsive design - iPhone 14 Pro Max (375px) */
+@media (max-width: 430px) {
+    /* Contenedor principal */
+    .main-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    /* Header y hero section */
+    header {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .hero-content-left,
+    .hero-content-right {
+        min-width: 100%;
+        gap: 15px;
+    }
+    
+    .hero-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-name {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        border: 4px solid #32cd32;
+    }
+    
+    .about-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .availability {
+        justify-content: center;
+    }
+    
+    .availability-text {
+        font-size: 12px;
+    }
+    
+    /* Sección de herramientas */
+    .tools-section {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .tools-section h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .tools-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .tool-item {
+        flex: 0 1 calc(50% - 10px);
+        min-width: 100px;
+        min-height: 100px;
+        gap: 10px;
+    }
+    
+    .tool-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+    
+    .tool-icon i {
+        font-size: 24px;
+    }
+    
+    .tool-name {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Sección educación y experiencia */
+    .education-experience {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .education-experience h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .education-experience-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .education,
+    .experience {
+        min-width: 100%;
+    }
+    
+    .education h3,
+    .experience h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .institution,
+    .company {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Layout principal */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+        gap: 15px;
+    }
+    
+    /* Secciones */
+    section {
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    article {
+        padding: 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+    
+    article h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+    }
+    
+    article p,
+    article li {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Aside */
+    aside {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    aside h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+    
+    aside p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Botones de redes sociales */
+    .social-buttons {
+        gap: 12px;
+        margin-top: 15px;
+    }
+    
+    .social-btn {
+        padding: 12px 15px;
+        border-radius: 10px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .social-btn i {
+        font-size: 18px;
+        width: 20px;
+    }
+    
+    .social-btn span {
+        font-size: 12px;
+    }
+    
+    /* Tablas */
+    .education-table {
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+    
+    .education-table th {
+        padding: 12px 10px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .education-table td {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+    
+    .education-table caption {
+        font-size: 16px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 15px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Responsive design - iPad Pro (1024px) */
+@media (min-width: 431px) and (max-width: 1024px) {
+    /* Contenedor principal */
+    .main-container {
+        padding: 25px;
+        max-width: 100%;
+    }
+    
+    /* Header y hero section */
+    header {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .hero-content-left {
+        flex: 1;
+        min-width: 250px;
+        gap: 18px;
+    }
+    
+    .hero-content-right {
+        flex: 1;
+        min-width: 250px;
+        gap: 18px;
+    }
+    
+    .hero-title {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+    
+    .hero-name {
+        font-size: 2.5rem;
+        letter-spacing: 2.5px;
+        line-height: 1.1;
+    }
+    
+    .cta-buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .cta-button {
+        padding: 12px 22px;
+        font-size: 13px;
+        border-radius: 22px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #32cd32;
+    }
+    
+    .about-text {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .availability {
+        justify-content: flex-start;
+    }
+    
+    .availability-text {
+        font-size: 13px;
+    }
+    
+    /* Sección de herramientas */
+    .tools-section {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .tools-section h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        letter-spacing: 2.5px;
+    }
+    
+    .tools-grid {
+        gap: 25px;
+        justify-content: center;
+    }
+    
+    .tool-item {
+        flex: 0 1 calc(33.333% - 17px);
+        min-width: 110px;
+        min-height: 110px;
+        gap: 12px;
+    }
+    
+    .tool-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+    }
+    
+    .tool-icon i {
+        font-size: 28px;
+    }
+    
+    .tool-name {
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    /* Sección educación y experiencia */
+    .education-experience {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .education-experience h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        letter-spacing: 2.5px;
+    }
+    
+    .education-experience-content {
+        flex-direction: row;
+        gap: 30px;
+        align-items: stretch;
+    }
+    
+    .education,
+    .experience {
+        flex: 1;
+        min-width: 250px;
+    }
+    
+    .education h3,
+    .experience h3 {
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    
+    .institution,
+    .company {
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+    
+    /* Layout principal */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+        gap: 20px;
+    }
+    
+    /* Secciones */
+    section {
+        padding: 25px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+    }
+    
+    section h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+        letter-spacing: 1.5px;
+    }
+    
+    article {
+        padding: 18px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+    
+    article h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        letter-spacing: 0.8px;
+    }
+    
+    article p,
+    article li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Aside */
+    aside {
+        padding: 25px;
+        border-radius: 14px;
+    }
+    
+    aside h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        letter-spacing: 1.5px;
+    }
+    
+    aside p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Botones de redes sociales */
+    .social-buttons {
+        gap: 15px;
+        margin-top: 18px;
+    }
+    
+    .social-btn {
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    .social-btn i {
+        font-size: 19px;
+        width: 22px;
+    }
+    
+    .social-btn span {
+        font-size: 13px;
+    }
+    
+    /* Tablas */
+    .education-table {
+        margin-top: 15px;
+        border-radius: 12px;
+    }
+    
+    .education-table th {
+        padding: 14px 12px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    .education-table td {
+        padding: 14px 12px;
+        font-size: 13px;
+    }
+    
+    .education-table caption {
+        font-size: 17px;
+        margin-bottom: 15px;
+        letter-spacing: 1.5px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 18px;
+        border-radius: 14px;
+        margin-top: 20px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+}
+
+/* Responsive design - Desktop/Laptop (1025px+) */
+@media (min-width: 1025px) {
+    /* Contenedor principal */
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Layout principal - Grid de 2 columnas */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        grid-template-areas: 
+            "content sidebar";
+    }
+    
+    main > div {
+        grid-area: content;
+    }
+    
+    aside {
+        grid-area: sidebar;
+        height: fit-content;
+    }
+    
+    /* Hero section - Layout horizontal completo */
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .hero-content-left,
+    .hero-content-right {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        border: 6px solid #32cd32;
+    }
+    
+    /* Tools grid - 6 elementos en fila */
+    .tools-grid {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .tool-item {
+        flex: 0 1 120px;
+        min-height: 120px;
+    }
+    
+    .tool-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* Education & Experience - Layout horizontal */
+    .education-experience-content {
+        flex-direction: row;
+        gap: 40px;
+        align-items: stretch;
+    }
+    
+    .education,
+    .experience {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    /* Elementos de UI optimizados para desktop */
+    .cta-buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .availability {
+        justify-content: flex-start;
+    }
+    
+    .social-buttons {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .social-btn {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    
+    .social-btn i {
+        font-size: 20px;
+        width: 24px;
+    }
+    
+    .social-btn span {
+        font-size: 14px;
+    }
+    
+    /* Tablas optimizadas para desktop */
+    .education-table th,
+    .education-table td {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .education-table caption {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    /* Footer optimizado */
+    footer {
+        padding: 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
