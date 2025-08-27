@@ -1086,3 +1086,128 @@ footer {
         letter-spacing: 0.8px;
     }
 }
+
+/* Responsive design - Desktop/Laptop (1025px+) */
+@media (min-width: 1025px) {
+    /* Contenedor principal */
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    /* Layout principal - Grid de 2 columnas */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        grid-template-areas: 
+            "content sidebar";
+    }
+    
+    main > div {
+        grid-area: content;
+    }
+    
+    aside {
+        grid-area: sidebar;
+        height: fit-content;
+    }
+    
+    /* Hero section - Layout horizontal completo */
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .hero-content-left,
+    .hero-content-right {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        border: 6px solid #32cd32;
+    }
+    
+    /* Tools grid - 6 elementos en fila */
+    .tools-grid {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .tool-item {
+        flex: 0 1 120px;
+        min-height: 120px;
+    }
+    
+    .tool-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* Education & Experience - Layout horizontal */
+    .education-experience-content {
+        flex-direction: row;
+        gap: 40px;
+        align-items: stretch;
+    }
+    
+    .education,
+    .experience {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    /* Elementos de UI optimizados para desktop */
+    .cta-buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .availability {
+        justify-content: flex-start;
+    }
+    
+    .social-buttons {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .social-btn {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    
+    .social-btn i {
+        font-size: 20px;
+        width: 24px;
+    }
+    
+    .social-btn span {
+        font-size: 14px;
+    }
+    
+    /* Tablas optimizadas para desktop */
+    .education-table th,
+    .education-table td {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .education-table caption {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    /* Footer optimizado */
+    footer {
+        padding: 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
