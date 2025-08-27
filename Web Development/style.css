@@ -188,7 +188,7 @@ header {
 .tool-icon {
     width: 80px;
     height: 80px;
-    background: #3a4a3a;
+    background: #2a3a2a;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -390,12 +390,12 @@ nav a:hover {
 
 .education-table td {
     padding: 15px;
-    border-bottom: 1px solid #3a4a3a;
+    border-bottom: 1px solid #2a3a2a;
     color: #ffffff;
 }
 
 .education-table tr:hover {
-    background-color: #3a4a3a;
+    background-color: #2a3a2a;
 }
 
 .education-table tr:last-child td {
@@ -436,7 +436,7 @@ section h2 {
 }
 
 article {
-    background: #3a4a3a;
+    background: #2a3a2a;
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -489,7 +489,7 @@ aside p, aside li {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #3a4a3a;
+    background: #2a3a2a;
     color: #ffffff;
     padding: 15px 20px;
     text-decoration: none;
