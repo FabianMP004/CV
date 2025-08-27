@@ -27,16 +27,19 @@ header {
 }
 
 .hero-section {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 40px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .hero-content-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .hero-title {
@@ -61,6 +64,8 @@ header {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .cta-button {
@@ -101,6 +106,8 @@ header {
 .hero-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .profile-image {
@@ -116,6 +123,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .about-text {
@@ -128,7 +137,9 @@ header {
 .availability {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .availability-text {
@@ -171,30 +182,23 @@ header {
 }
 
 .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 30px;
-    justify-items: center;
-    grid-auto-rows: minmax(120px, auto);
-    grid-template-areas: 
-        "python js sql"
-        "html css github";
 }
 
 .tool-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     text-align: center;
+    flex: 0 1 120px;
+    min-height: 120px;
 }
-
-.tool-item:nth-child(1) { grid-area: python; }
-.tool-item:nth-child(2) { grid-area: js; }
-.tool-item:nth-child(3) { grid-area: sql; }
-.tool-item:nth-child(4) { grid-area: html; }
-.tool-item:nth-child(5) { grid-area: css; }
-.tool-item:nth-child(6) { grid-area: github; }
 
 .tool-icon {
     width: 80px;
@@ -247,24 +251,17 @@ header {
 }
 
 .education-experience-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     gap: 40px;
-    grid-template-areas: 
-        "education experience";
-    align-items: start;
+    flex-wrap: wrap;
 }
 
 .education, .experience {
     text-align: center;
-}
-
-.education {
-    grid-area: education;
-}
-
-.experience {
-    grid-area: experience;
+    flex: 1;
+    min-width: 300px;
 }
 
 .education h3, .experience h3 {
@@ -520,11 +517,13 @@ aside p, aside li {
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
+    align-items: stretch;
 }
 
 .social-btn {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 12px;
     background: #2a3a2a;
     color: #ffffff;
@@ -536,6 +535,7 @@ aside p, aside li {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    flex: 1;
 }
 
 .social-btn:hover {
@@ -571,9 +571,14 @@ footer {
 /* Responsive design */
 @media (max-width: 768px) {
     .hero-section {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
         gap: 20px;
+    }
+    
+    .hero-content-left,
+    .hero-content-right {
+        min-width: 100%;
     }
     
     main {
@@ -584,20 +589,23 @@ footer {
     }
     
     .education-experience-content {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "education"
-            "experience";
+        flex-direction: column;
         gap: 20px;
     }
     
+    .education,
+    .experience {
+        min-width: 100%;
+    }
+    
     .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
-            "python js"
-            "sql html"
-            "css github";
+        justify-content: center;
         gap: 20px;
+    }
+    
+    .tool-item {
+        flex: 0 1 calc(50% - 15px);
+        min-width: 120px;
     }
     
     .main-container {
