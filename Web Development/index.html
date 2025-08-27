@@ -11,164 +11,218 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/Web Development/images/apple-touch-icon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="hero-section">
-            <img src="/Web Development/images/Foto Perfil.png" alt="Fabian Miranda" class="profile-image">
-            <div class="hero-content">
-                <div class="hero-title">Desarrollador / Programador</div>
-                <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
+    <div class="main-container">
+        <header>
+            <div class="hero-section">
+                <div class="hero-content-left">
+                    <div class="hero-title">Desarrollador / Programador</div>
+                    <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
+                    <div class="cta-buttons">
+                        <a href="#" onclick="generatePDF()" class="cta-button secondary">CV DOWNLOAD</a>
+                        <a href="#contact" class="cta-button primary">WORK</a>
+                    </div>
+                </div>
+                
+                <div class="hero-center">
+                    <img src="/Web Development/images/Foto Perfil.png" alt="Fabian Miranda" class="profile-image">
+                </div>
+                
+                <div class="hero-content-right">
+                    <p class="about-text">¡Saludos! Soy Fabian Miranda, un desarrollador apasionado altamente capacitado en crear experiencias digitales intuitivas que combinan perfectamente la estética con la funcionalidad.</p>
+                    <div class="availability">
+                        <span class="availability-text">disponible para trabajo</span>
+                        <div class="availability-dot"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <nav>
-        <div class="nav-left">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre Mí</a>
-            <a href="#educacion">Educación</a>
-            <a href="#experiencia">Experiencia</a>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/FabianMP004" target="_blank" class="social-link">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub" class="social-icon">
-                GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-link">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
-                LinkedIn
-            </a>
-            <a href="mailto:fabianmiranda2205@gmail.com" class="social-link">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Email" class="social-icon">
-                Email
-            </a>
-        </div>
-    </nav>
+        <section class="tools-section">
+            <h2>TOOLS & SKILLS</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <span class="tool-name">Python</span>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <span class="tool-name">JavaScript</span>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="tool-name">SQL</span>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <span class="tool-name">HTML</span>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <span class="tool-name">CSS</span>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <span class="tool-name">GitHub</span>
+                </div>
+            </div>
+        </section>
 
-    <main>
-        <div>
-            <section id="inicio">
-                <h2>Inicio</h2>
-                <article>
-                    <h3>Bienvenido</h3>
-                    <p>Esta es mi página web personal donde comparto información sobre mis proyectos y experiencia.</p>
-                </article>
-            </section>
+        <section class="education-experience">
+            <h2>EDUCATION & EXPERIENCE</h2>
+            <div class="education-experience-content">
+                <div class="education">
+                    <h3>Bachelor's Degree in Computer Science</h3>
+                    <p class="institution">UNIVERSIDAD FRANCISCO MARROQUÍN</p>
+                </div>
+                <div class="experience">
+                    <h3>Software Developer - crafting digital solutions for modern applications.</h3>
+                    <p class="company">FREELANCE</p>
+                </div>
+            </div>
+        </section>
 
-            <section id="sobre-mi">
-                <h2>Sobre Mí</h2>
-                <article>
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Trabajo en equipo</li>
-                        <li>Comunicación</li>
-                        <li>Adaptabilidad</li>
-                        <li>Resolución de problemas</li>
-                        <li>Gestión del tiempo</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>Lenguajes de Programación</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>Tecnologias</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Postman</li>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>SQL</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </article>
-            </section>
+        <main>
+            <div>
+                <section id="inicio">
+                    <h2>Inicio</h2>
+                    <article>
+                        <h3>Bienvenido</h3>
+                        <p>Esta es mi página web personal donde comparto información sobre mis proyectos y experiencia.</p>
+                    </article>
+                </section>
 
-                         <section id="educacion">
-                 <h2>Educación</h2>
-                 <table class="education-table">
-                     <caption>Formación Académica y Títulos Obtenidos</caption>
-                     <thead>
-                         <tr>
-                             <th scope="col">Período</th>
-                             <th scope="col">Institución</th>
-                             <th scope="col">Título</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>2023 - Presente</td>
-                             <td>Universidad Francisco Marroquín</td>
-                             <td>Ingeniería en Ciencias de la Computación</td>
-                         </tr>
-                         <tr>
-                             <td>2011 - 2022</td>
-                             <td>Centro Escolar el Roble</td>
-                             <td>Bachillerato Internacional</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </section>
+                <section id="sobre-mi">
+                    <h2>Sobre Mí</h2>
+                    <article>
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Trabajo en equipo</li>
+                            <li>Comunicación</li>
+                            <li>Adaptabilidad</li>
+                            <li>Resolución de problemas</li>
+                            <li>Gestión del tiempo</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Lenguajes de Programación</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Tecnologias</h3>
+                        <ul>
+                            <li>Docker</li>
+                            <li>Postman</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>SQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </article>
+                </section>
 
-                         <section id="experiencia">
-                 <h2>Experiencia Laboral</h2>
-                 <table class="education-table">
-                     <caption>Historial Profesional y Cargos Desempeñados</caption>
-                     <thead>
-                         <tr>
-                             <th scope="col">Período</th>
-                             <th scope="col">Empresa</th>
-                             <th scope="col">Cargo</th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>Nov 2024 - Dic 2024</td>
-                             <td>Photoland GT</td>
-                             <td>Encargado de Caja</td>
-                         </tr>
-                         <tr>
-                             <td>Nov 2023 - Dic 2023</td>
-                             <td>Artek</td>
-                             <td>Asesor de Ventas</td>
-                         </tr>
-                         <tr>
-                             <td>Ene 2021 - Ago 2024</td>
-                             <td>Artek</td>
-                             <td>Encargado de Operaciones</td>
-                         </tr>
-                     </tbody>
-                 </table>
-             </section>
+                <section id="educacion">
+                    <h2>Educación</h2>
+                    <table class="education-table">
+                        <caption>Formación Académica y Títulos Obtenidos</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Período</th>
+                                <th scope="col">Institución</th>
+                                <th scope="col">Título</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023 - Presente</td>
+                                <td>Universidad Francisco Marroquín</td>
+                                <td>Ingeniería en Ciencias de la Computación</td>
+                            </tr>
+                            <tr>
+                                <td>2011 - 2022</td>
+                                <td>Centro Escolar el Roble</td>
+                                <td>Bachillerato Internacional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
 
-        </div>
+                <section id="experiencia">
+                    <h2>Experiencia Laboral</h2>
+                    <table class="education-table">
+                        <caption>Historial Profesional y Cargos Desempeñados</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Período</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">Cargo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nov 2024 - Dic 2024</td>
+                                <td>Photoland GT</td>
+                                <td>Encargado de Caja</td>
+                            </tr>
+                            <tr>
+                                <td>Nov 2023 - Dic 2023</td>
+                                <td>Artek</td>
+                                <td>Asesor de Ventas</td>
+                            </tr>
+                            <tr>
+                                <td>Ene 2021 - Ago 2024</td>
+                                <td>Artek</td>
+                                <td>Encargado de Operaciones</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
 
-        <aside>
-            <h3>Información Adicional</h3>
-            <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
-            <ul>
-                <li>Enlace útil 1</li>
-                <li>Enlace útil 2</li>
-                <li>Enlace útil 3</li>
-            </ul>
-            <a href="#" onclick="generatePDF()" class="download-button">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/download.svg" alt="Descargar CV" class="download-icon">
-                Descargar CV
-            </a>
-        </aside>
-    </main>
+            <aside>
+                <h3>Información Adicional</h3>
+                <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
+                <div class="social-buttons">
+                    <a href="mailto:fabianmiranda2205@gmail.com" class="social-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Correo</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/FabianMP004" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </aside>
+        </main>
 
-    <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
     <script>
         function generatePDF() {
