@@ -520,6 +520,19 @@ footer {
     letter-spacing: 1px;
 }
 
+/* Botón de descarga (marca) */
+.btn-brand {
+    background-color: #32cd32;
+    border-color: #32cd32;
+    color: #ffffff;
+}
+
+.btn-brand:hover {
+    background-color: #2a3a2a; /* mismo color de background de secciones */
+    border-color: #32cd32; /* mantiene el borde verde */
+    color: #ffffff;
+}
+
 /* Responsive design - iPhone 14 Pro Max (375px) */
 @media (max-width: 430px) {
     /* Contenedor principal */
