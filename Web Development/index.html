@@ -13,9 +13,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet"> <!-- Tipografía Nunito Google Fonts -->
 </head>
-<body>
-    <div class="main-container">
+    <body class="font-nunito"> <!-- Aplica Nunito usando clase personalizada Bootstrap -->
+    <div class="main-container animate__animated animate__fadeIn"> <!-- Animación de entrada con Animate.css -->
         <header>
             <div class="hero-section">
                 <div class="hero-content-left">
@@ -41,6 +42,9 @@
                 </div>
             </div>
         </header>
+                <style>
+                    .font-nunito { font-family: 'Nunito', sans-serif !important; } /* Bootstrap utility personalizada */
+                </style>
 
         <section class="tools-section">
             <h2>TOOLS & SKILLS</h2>
