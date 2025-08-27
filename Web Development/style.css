@@ -110,14 +110,7 @@ header {
     flex-shrink: 0;
 }
 
-.profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #32cd32;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
+
 
 .hero-content-right {
     display: flex;
@@ -617,11 +610,7 @@ footer {
         border-radius: 20px;
     }
     
-    .profile-image {
-        width: 180px;
-        height: 180px;
-        border: 4px solid #32cd32;
-    }
+    
     
     .about-text {
         font-size: 14px;
@@ -879,11 +868,7 @@ footer {
         border-radius: 22px;
     }
     
-    .profile-image {
-        width: 200px;
-        height: 200px;
-        border: 5px solid #32cd32;
-    }
+    
     
     .about-text {
         font-size: 15px;
@@ -1128,11 +1113,7 @@ footer {
         min-width: 300px;
     }
     
-    .profile-image {
-        width: 250px;
-        height: 250px;
-        border: 6px solid #32cd32;
-    }
+    
     
     /* Tools grid - 6 elementos en fila */
     .tools-grid {
