@@ -822,3 +822,267 @@ footer {
         letter-spacing: 0.5px;
     }
 }
+
+/* Responsive design - iPad Pro (1024px) */
+@media (min-width: 431px) and (max-width: 1024px) {
+    /* Contenedor principal */
+    .main-container {
+        padding: 25px;
+        max-width: 100%;
+    }
+    
+    /* Header y hero section */
+    header {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .hero-content-left {
+        flex: 1;
+        min-width: 250px;
+        gap: 18px;
+    }
+    
+    .hero-content-right {
+        flex: 1;
+        min-width: 250px;
+        gap: 18px;
+    }
+    
+    .hero-title {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+    
+    .hero-name {
+        font-size: 2.5rem;
+        letter-spacing: 2.5px;
+        line-height: 1.1;
+    }
+    
+    .cta-buttons {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .cta-button {
+        padding: 12px 22px;
+        font-size: 13px;
+        border-radius: 22px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #32cd32;
+    }
+    
+    .about-text {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .availability {
+        justify-content: flex-start;
+    }
+    
+    .availability-text {
+        font-size: 13px;
+    }
+    
+    /* Sección de herramientas */
+    .tools-section {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .tools-section h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        letter-spacing: 2.5px;
+    }
+    
+    .tools-grid {
+        gap: 25px;
+        justify-content: center;
+    }
+    
+    .tool-item {
+        flex: 0 1 calc(33.333% - 17px);
+        min-width: 110px;
+        min-height: 110px;
+        gap: 12px;
+    }
+    
+    .tool-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+    }
+    
+    .tool-icon i {
+        font-size: 28px;
+    }
+    
+    .tool-name {
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    /* Sección educación y experiencia */
+    .education-experience {
+        padding: 35px 30px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .education-experience h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        letter-spacing: 2.5px;
+    }
+    
+    .education-experience-content {
+        flex-direction: row;
+        gap: 30px;
+        align-items: stretch;
+    }
+    
+    .education,
+    .experience {
+        flex: 1;
+        min-width: 250px;
+    }
+    
+    .education h3,
+    .experience h3 {
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+    
+    .institution,
+    .company {
+        font-size: 15px;
+        letter-spacing: 0.8px;
+    }
+    
+    /* Layout principal */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+        gap: 20px;
+    }
+    
+    /* Secciones */
+    section {
+        padding: 25px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+    }
+    
+    section h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+        letter-spacing: 1.5px;
+    }
+    
+    article {
+        padding: 18px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+    
+    article h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        letter-spacing: 0.8px;
+    }
+    
+    article p,
+    article li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Aside */
+    aside {
+        padding: 25px;
+        border-radius: 14px;
+    }
+    
+    aside h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        letter-spacing: 1.5px;
+    }
+    
+    aside p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* Botones de redes sociales */
+    .social-buttons {
+        gap: 15px;
+        margin-top: 18px;
+    }
+    
+    .social-btn {
+        padding: 14px 18px;
+        border-radius: 12px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    .social-btn i {
+        font-size: 19px;
+        width: 22px;
+    }
+    
+    .social-btn span {
+        font-size: 13px;
+    }
+    
+    /* Tablas */
+    .education-table {
+        margin-top: 15px;
+        border-radius: 12px;
+    }
+    
+    .education-table th {
+        padding: 14px 12px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    .education-table td {
+        padding: 14px 12px;
+        font-size: 13px;
+    }
+    
+    .education-table caption {
+        font-size: 17px;
+        margin-bottom: 15px;
+        letter-spacing: 1.5px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 18px;
+        border-radius: 14px;
+        margin-top: 20px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+}
