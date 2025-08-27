@@ -568,29 +568,130 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* Responsive design - iPhone 14 Pro Max (375px) */
+@media (max-width: 430px) {
+    /* Contenedor principal */
+    .main-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    /* Header y hero section */
+    header {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
     .hero-section {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 25px;
     }
     
     .hero-content-left,
     .hero-content-right {
         min-width: 100%;
+        gap: 15px;
     }
     
-    main {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "content"
-            "sidebar";
+    .hero-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-name {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        border: 4px solid #32cd32;
+    }
+    
+    .about-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .availability {
+        justify-content: center;
+    }
+    
+    .availability-text {
+        font-size: 12px;
+    }
+    
+    /* Sección de herramientas */
+    .tools-section {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .tools-section h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .tools-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .tool-item {
+        flex: 0 1 calc(50% - 10px);
+        min-width: 100px;
+        min-height: 100px;
+        gap: 10px;
+    }
+    
+    .tool-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+    
+    .tool-icon i {
+        font-size: 24px;
+    }
+    
+    .tool-name {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Sección educación y experiencia */
+    .education-experience {
+        padding: 25px 20px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .education-experience h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
     }
     
     .education-experience-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
     
     .education,
@@ -598,25 +699,126 @@ footer {
         min-width: 100%;
     }
     
-    .tools-grid {
-        justify-content: center;
-        gap: 20px;
+    .education h3,
+    .experience h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
     }
     
-    .tool-item {
-        flex: 0 1 calc(50% - 15px);
-        min-width: 120px;
+    .institution,
+    .company {
+        font-size: 14px;
+        letter-spacing: 0.5px;
     }
     
-    .main-container {
-        padding: 10px;
+    /* Layout principal */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+        gap: 15px;
     }
     
+    /* Secciones */
+    section {
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    article {
+        padding: 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+    
+    article h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+    }
+    
+    article p,
+    article li {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Aside */
+    aside {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    aside h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+    
+    aside p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Botones de redes sociales */
     .social-buttons {
-        gap: 10px;
+        gap: 12px;
+        margin-top: 15px;
     }
     
     .social-btn {
         padding: 12px 15px;
+        border-radius: 10px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .social-btn i {
+        font-size: 18px;
+        width: 20px;
+    }
+    
+    .social-btn span {
+        font-size: 12px;
+    }
+    
+    /* Tablas */
+    .education-table {
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+    
+    .education-table th {
+        padding: 12px 10px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .education-table td {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+    
+    .education-table caption {
+        font-size: 16px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 15px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
     }
 }
