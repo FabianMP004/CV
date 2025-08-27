@@ -175,6 +175,10 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 30px;
     justify-items: center;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas: 
+        "python js sql"
+        "html css github";
 }
 
 .tool-item {
@@ -184,6 +188,13 @@ header {
     gap: 15px;
     text-align: center;
 }
+
+.tool-item:nth-child(1) { grid-area: python; }
+.tool-item:nth-child(2) { grid-area: js; }
+.tool-item:nth-child(3) { grid-area: sql; }
+.tool-item:nth-child(4) { grid-area: html; }
+.tool-item:nth-child(5) { grid-area: css; }
+.tool-item:nth-child(6) { grid-area: github; }
 
 .tool-icon {
     width: 80px;
@@ -239,10 +250,21 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    grid-template-areas: 
+        "education experience";
+    align-items: start;
 }
 
 .education, .experience {
     text-align: center;
+}
+
+.education {
+    grid-area: education;
+}
+
+.experience {
+    grid-area: experience;
 }
 
 .education h3, .experience h3 {
@@ -416,6 +438,21 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    grid-template-areas: 
+        "content sidebar";
+}
+
+main > div {
+    grid-area: content;
+}
+
+aside {
+    grid-area: sidebar;
+    background: #2a3a2a;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 section {
@@ -539,13 +576,27 @@ footer {
         gap: 20px;
     }
     
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "content"
+            "sidebar";
+    }
+    
     .education-experience-content {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "education"
+            "experience";
         gap: 20px;
     }
     
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "python js"
+            "sql html"
+            "css github";
         gap: 20px;
     }
     
