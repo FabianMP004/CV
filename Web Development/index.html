@@ -10,9 +10,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/Web Development/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/Web Development/images/apple-touch-icon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <div class="main-container">
@@ -21,15 +21,14 @@
                 <div class="hero-content-left">
                     <div class="hero-title">Desarrollador / Programador</div>
                     <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
-                    <div class="cta-buttons">
-                        <a href="#" onclick="generatePDF()" class="cta-button secondary">CV DOWNLOAD</a>
-                        <a href="#contact" class="cta-button primary">WORK</a>
+                    <div class="d-flex gap-2 flex-wrap justify-content-start align-items-center">
+                        <button type="button" onclick="generatePDF()" class="btn btn-sm text-uppercase fw-bold rounded-3 mt-3" style="background-color:#32cd32;border-color:#32cd32;color:#ffffff;">CV DOWNLOAD</button> <!-- Bootstrap: Button component (btn, rounded-3, utilities mt-3) + custom brand color (#32cd32) -->
                     </div>
                 </div>
                 
                 <div class="hero-center">
-                    <div class="rounded-circle overflow-hidden border border-5 border-success shadow" style="width:250px;height:250px;">
-                        <img src="/Web Development/images/Foto Perfil.png" alt="Fabian Miranda" class="w-100 h-100 object-fit-cover" /> <!-- Bootstrap: Utilities (rounded-circle, overflow-hidden, border, shadow, sizing w-100 h-100, object-fit-cover) -->
+                    <div class="rounded-circle overflow-hidden border border-5 shadow" style="width:250px;height:250px;border-color:#32cd32;">
+                        <img src="/Web Development/images/Foto Perfil.png" alt="Fabian Miranda" class="w-100 h-100 object-fit-cover" /> <!-- Bootstrap: Utilities (rounded-circle, overflow-hidden, border, shadow, sizing w-100 h-100, object-fit-cover) + custom brand color (#32cd32) -->
                     </div>
                 </div>
                 

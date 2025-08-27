@@ -60,48 +60,7 @@ header {
     margin: 0;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.cta-button {
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: 2px solid;
-    display: inline-block;
-    font-size: 14px;
-}
-
-.cta-button.primary {
-    background: #32cd32;
-    color: #ffffff;
-    border-color: #32cd32;
-}
-
-.cta-button.primary:hover {
-    background: transparent;
-    color: #32cd32;
-}
-
-.cta-button.secondary {
-    background: transparent;
-    color: #32cd32;
-    border-color: #32cd32;
-}
-
-.cta-button.secondary:hover {
-    background: #32cd32;
-    color: #ffffff;
-}
+ 
 
 .hero-center {
     display: flex;
