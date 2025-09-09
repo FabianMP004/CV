@@ -1,0 +1,77 @@
+// Saludo dinámico como popup
+function showGreetingPopup() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting = "";
+    if (hour >= 6 && hour < 12) {
+        greeting = "Buenos días";
+    } else if (hour >= 12 && hour < 19) {
+        greeting = "Buenas tardes";
+    } else {
+        greeting = "Buenas noches";
+    }
+    const popup = document.getElementById("greeting-popup");
+    if (popup) {
+        popup.textContent = greeting;
+        popup.style.display = "block";
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 10000);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", showGreetingPopup);
+// Saludo dinámico según la hora
+function setDynamicGreeting() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting = "";
+    if (hour >= 6 && hour < 12) {
+        greeting = "Buenos días";
+    } else if (hour >= 12 && hour < 19) {
+        greeting = "Buenas tardes";
+    } else {
+        greeting = "Buenas noches";
+    }
+    const greetingDiv = document.getElementById("dynamic-greeting");
+    if (greetingDiv) greetingDiv.textContent = greeting;
+}
+
+window.addEventListener("DOMContentLoaded", setDynamicGreeting);
+function generatePDF() {
+    // Crear una copia del contenido para el PDF
+    const originalContent = document.body.cloneNode(true);
+    // Crear un contenedor temporal para el PDF
+    const pdfContainer = document.createElement('div');
+    pdfContainer.style.cssText = `
+        background: white;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+    `;
+    // Obtener solo el contenido principal (sin nav y footer)
+    const header = originalContent.querySelector('header');
+    const main = originalContent.querySelector('main');
+    // Añadir contenido al contenedor PDF
+    if (header) pdfContainer.appendChild(header.cloneNode(true));
+    if (main) pdfContainer.appendChild(main.cloneNode(true));
+    // Configuración del PDF
+    const opt = {
+        margin: [0.5, 0.5, 0.5, 0.5],
+        filename: 'Fabian_Miranda_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { 
+            scale: 2,
+            useCORS: true,
+            allowTaint: true
+        },
+        jsPDF: { 
+            unit: 'in', 
+            format: 'a4', 
+            orientation: 'portrait' 
+        }
+    };
+    // Generar y descargar el PDF
+    html2pdf().set(opt).from(pdfContainer).save();
+}
