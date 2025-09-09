@@ -1289,3 +1289,19 @@ footer {
         margin-bottom: 10px;
     }
 }
+
+#toggle-contact {
+    font-weight:600;
+    border-radius:10px;
+    background:#32cd32;
+    color:#fff;
+    border:2px solid #32cd32;
+    transition:all 0.2s;
+}
+#toggle-contact:hover {
+    background:transparent;
+    color:#32cd32;
+    border:2px solid #218c21;
+    box-shadow:0 2px 8px rgba(50,205,50,0.15);
+    transform:translateY(-2px);
+}

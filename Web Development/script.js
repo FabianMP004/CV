@@ -110,3 +110,16 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.toggle("light-mode");
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const contactBtn = document.getElementById("toggle-contact");
+    const contactInfo = document.getElementById("contact-info");
+    if (contactBtn && contactInfo) {
+        contactBtn.addEventListener("click", function() {
+            if (contactInfo.style.display === "none") {
+                contactInfo.style.display = "";
+            } else {
+                contactInfo.style.display = "none";
+            }
+        });
+    }
+});
