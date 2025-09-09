@@ -1,4 +1,4 @@
-/* Tablas de educación y experiencia laboral */
+/* Tablas de educación y experiencia */
 .education-table {
     width: 100%;
     border-collapse: collapse;
@@ -88,7 +88,7 @@ header {
 }
 
 .hero-title {
-    color: #32cd32;
+    color: #218c21;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
@@ -373,8 +373,9 @@ nav a:hover {
 }
 
 .download-button:hover {
-    background: transparent;
-    color: #32cd32;
+    background: #218c21;
+    color: #ffffff;
+    border-color: #218c21;
 }
 
 .download-icon {
@@ -526,11 +527,12 @@ footer {
     background-color: #32cd32;
     border-color: #32cd32;
     color: #ffffff;
+    transition: all 0.3s;
 }
 
 .btn-brand:hover {
-    background-color: #2a3a2a; /* mismo color de background de secciones */
-    border-color: #32cd32; /* mantiene el borde verde */
+    background-color: #218c21;
+    border-color: #218c21;
     color: #ffffff;
 }
 
@@ -1164,4 +1166,160 @@ footer {
         font-size: 14px;
         letter-spacing: 1px;
     }
+}
+
+#skills-search {
+    max-width: 180px;
+    margin-left: 12px;
+    border-radius: 8px;
+    border: 2px solid #32cd32;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #f8fff4;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(50,205,50,0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+#skills-search:focus {
+    border-color: #218c21;
+    box-shadow: 0 2px 12px rgba(33,140,33,0.15);
+    outline: none;
+}
+
+/* Modo claro */
+.light-mode {
+    background-color: #f3f3e7 !important;
+    color: #222 !important;
+}
+
+.light-mode header {
+    background: #ffffff;
+    color: #222;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.light-mode .hero-title {
+    color: #32cd32;
+}
+
+.light-mode .hero-name {
+    color: #222;
+}
+
+.light-mode .about-text,
+.light-mode .availability-text,
+.light-mode nav a,
+.light-mode footer {
+    color: #222;
+}
+
+.light-mode .education-table {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .education-table th {
+    background: #32cd32;
+    color: #ffffff;
+}
+
+.light-mode .education-table td,
+.light-mode .education-table caption {
+    color: #222 !important;
+}
+
+.light-mode .tool-icon {
+    background: #ffffff;
+    border: 2px solid #32cd32;
+}
+
+.light-mode .tool-icon:hover {
+    background: #32cd32;
+    color: #ffffff;
+}
+
+.light-mode .btn-brand {
+    background-color: #32cd32;
+    border-color: #32cd32;
+    color: #ffffff;
+}
+
+.light-mode .btn-brand:hover {
+    background-color: #218c21;
+    border-color: #218c21;
+    color: #ffffff;
+}
+
+.light-mode .tool-icon i {
+    color: #222 !important;
+}
+
+/* Estilos para impresión */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    
+    header,
+    .main-container,
+    footer {
+        box-shadow: none;
+        border: none;
+    }
+    
+    .hero-section {
+        display: block;
+        text-align: center;
+    }
+    
+    .hero-content-left,
+    .hero-content-right {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tools-section,
+    .education-experience {
+        page-break-inside: avoid;
+    }
+    
+    nav,
+    .social-links,
+    .download-button {
+        display: none;
+    }
+    
+    /* Tablas */
+    .education-table {
+        page-break-inside: auto;
+    }
+    
+    .education-table th,
+    .education-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .education-table caption {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+#toggle-contact {
+    font-weight:600;
+    border-radius:10px;
+    background:#32cd32;
+    color:#fff;
+    border:2px solid #32cd32;
+    transition:all 0.2s;
+}
+#toggle-contact:hover {
+    background:transparent;
+    color:#32cd32;
+    border:2px solid #218c21;
+    box-shadow:0 2px 8px rgba(50,205,50,0.15);
+    transform:translateY(-2px);
 }

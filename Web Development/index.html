@@ -16,11 +16,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet"> <!-- Tipografía Nunito Google Fonts -->
 </head>
     <body class="font-nunito"> <!-- Aplica Nunito usando clase personalizada Bootstrap -->
+    <div id="greeting-popup" style="display:none;position:fixed;top:24px;left:24px;min-width:220px;max-width:90vw;z-index:9999;padding:10px 24px;background:#32cd32;color:#fff;text-align:center;font-size:1.1rem;font-weight:600;border-radius:12px;border:2px solid #218c21;box-shadow:0 2px 8px rgba(0,0,0,0.10);margin:0;">
+    </div>
     <div class="main-container animate__animated animate__fadeIn"> <!-- Animación de entrada con Animate.css -->
         <header>
             <div class="hero-section">
                 <div class="hero-content-left">
                     <div class="hero-title">Desarrollador / Programador</div>
+
                     <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
                     <div class="d-flex gap-2 flex-wrap justify-content-start align-items-center">
                         <button type="button" onclick="generatePDF()" class="btn btn-lg text-uppercase fw-bold rounded-3 mt-3 btn-brand">CV DOWNLOAD</button> <!-- Bootstrap: Button component (btn, btn-lg, rounded-3, utilities mt-3) + custom brand class (btn-brand) -->
@@ -36,9 +39,10 @@
                 <div class="hero-content-right">
                     <p class="about-text">¡Saludos! Soy Fabian Miranda, un desarrollador apasionado altamente capacitado en crear experiencias digitales intuitivas que combinan perfectamente la estética con la funcionalidad.</p>
                     <div class="availability">
-                        <span class="availability-text">Disponible para trabajo</span>
+                        <span class="availability-text">Dispoinble para trabajar</span>
                         <div class="availability-dot"></div>
                     </div>
+                    <button id="toggle-theme" class="btn btn-secondary mt-3" style="font-weight:600;border-radius:10px;">Modo Claro/Oscuro</button>
                 </div>
             </div>
         </header>
@@ -115,8 +119,11 @@
                 <section id="sobre-mi">
                     <h2>Sobre Mí</h2>
                     <article>
-                        <h3>Soft Skills</h3>
-                        <ul>
+                        <div class="d-flex align-items-center mb-2">
+                            <h3 class="me-2">Soft Skills</h3>
+                            <input type="text" id="skills-search" class="form-control form-control-sm" placeholder="Buscar habilidad..." style="max-width:180px;">
+                        </div>
+                        <ul id="soft-skills-list">
                             <li>Trabajo en equipo</li>
                             <li>Comunicación</li>
                             <li>Adaptabilidad</li>
@@ -275,20 +282,29 @@
             <aside>
                 <h3>Información Adicional</h3>
                 <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
-                <div class="social-buttons">
-                    <a href="mailto:fabianmiranda2205@gmail.com" class="social-btn">
-                        <i class="fas fa-envelope"></i>
-                        <span>Correo</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-btn">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/FabianMP004" target="_blank" class="social-btn">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                </div>
+                    <button id="toggle-experience" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+                        <i class="fas fa-briefcase me-2"></i> Experiencia Laboral
+                    </button>
+                    <button id="toggle-education" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+                        <i class="fas fa-graduation-cap me-2"></i> Educación
+                    </button>
+                    <button id="toggle-contact" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+                        <i class="fas fa-address-book me-2"></i> Información de Contacto
+                    </button>
+                    <div class="social-buttons" id="contact-info" style="display:none;">
+                        <a href="mailto:fabianmiranda2205@gmail.com" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Correo</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/fabián-miranda-a6385a243/" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/FabianMP004" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
             </aside>
         </main>
 
@@ -297,49 +313,6 @@
         </footer>
     </div>
 
-    <script>
-        function generatePDF() {
-            // Crear una copia del contenido para el PDF
-            const originalContent = document.body.cloneNode(true);
-            
-            // Crear un contenedor temporal para el PDF
-            const pdfContainer = document.createElement('div');
-            pdfContainer.style.cssText = `
-                background: white;
-                padding: 20px;
-                font-family: Arial, sans-serif;
-                max-width: 800px;
-                margin: 0 auto;
-            `;
-            
-            // Obtener solo el contenido principal (sin nav y footer)
-            const header = originalContent.querySelector('header');
-            const main = originalContent.querySelector('main');
-            
-            // Añadir contenido al contenedor PDF
-            if (header) pdfContainer.appendChild(header.cloneNode(true));
-            if (main) pdfContainer.appendChild(main.cloneNode(true));
-            
-            // Configuración del PDF
-            const opt = {
-                margin: [0.5, 0.5, 0.5, 0.5],
-                filename: 'Fabian_Miranda_CV.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { 
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true
-                },
-                jsPDF: { 
-                    unit: 'in', 
-                    format: 'a4', 
-                    orientation: 'portrait' 
-                }
-            };
-            
-            // Generar y descargar el PDF
-            html2pdf().set(opt).from(pdfContainer).save();
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
