@@ -123,3 +123,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("skills-search");
+    const skillsList = document.getElementById("soft-skills-list");
+    if (searchInput && skillsList) {
+        searchInput.addEventListener("input", function() {
+            const filter = searchInput.value.toLowerCase();
+            Array.from(skillsList.getElementsByTagName("li")).forEach(function(item) {
+                if (item.textContent.toLowerCase().includes(filter)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    }
+});

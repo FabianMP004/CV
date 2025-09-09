@@ -1168,6 +1168,24 @@ footer {
     }
 }
 
+#skills-search {
+    max-width: 180px;
+    margin-left: 12px;
+    border-radius: 8px;
+    border: 2px solid #32cd32;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #f8fff4;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(50,205,50,0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+#skills-search:focus {
+    border-color: #218c21;
+    box-shadow: 0 2px 12px rgba(33,140,33,0.15);
+    outline: none;
+}
+
 /* Modo claro */
 .light-mode {
     background-color: #f3f3e7 !important;
