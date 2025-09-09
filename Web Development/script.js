@@ -1,3 +1,31 @@
+// Mostrar/Ocultar Educación
+window.addEventListener("DOMContentLoaded", function() {
+    const btnEdu = document.getElementById("toggle-education");
+    const eduSection = document.getElementById("educacion");
+    if (btnEdu && eduSection) {
+        btnEdu.addEventListener("click", function() {
+            if (eduSection.style.display === "none") {
+                eduSection.style.display = "";
+            } else {
+                eduSection.style.display = "none";
+            }
+        });
+    }
+});
+// Mostrar/Ocultar Experiencia Laboral
+window.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("toggle-experience");
+    const expSection = document.getElementById("experiencia");
+    if (btn && expSection) {
+        btn.addEventListener("click", function() {
+            if (expSection.style.display === "none") {
+                expSection.style.display = "";
+            } else {
+                expSection.style.display = "none";
+            }
+        });
+    }
+});
 // Saludo dinámico como popup
 function showGreetingPopup() {
     const now = new Date();

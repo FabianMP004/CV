@@ -1,3 +1,31 @@
+.toggle-btn:active {
+    background: transparent;
+    color: #32cd32;
+    border-color: #32cd32;
+    box-shadow: none;
+}
+/* Botones mostrar/ocultar experiencia y educación con animación extra */
+.toggle-btn:hover {
+    background: #fff;
+    color: #32cd32;
+    border-color: #32cd32;
+    box-shadow: 0 4px 12px rgba(50,205,50,0.15);
+    transform: translateY(-2px) scale(1.03);
+    transition: all 0.2s;
+}
+/* Botones mostrar/ocultar experiencia y educación */
+#toggle-experience:hover,
+#toggle-education:hover {
+    background: transparent;
+    color: #32cd32;
+    border-color: #32cd32;
+}
+/* Botón mostrar/ocultar experiencia laboral personalizado */
+#toggle-experience:hover {
+    background: transparent;
+    color: #32cd32;
+    border-color: #32cd32;
+}
 /* Tablas de educación y experiencia laboral */
 .education-table {
     width: 100%;
