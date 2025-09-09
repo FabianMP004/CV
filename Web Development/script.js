@@ -103,3 +103,10 @@ function generatePDF() {
     // Generar y descargar el PDF
     html2pdf().set(opt).from(pdfContainer).save();
 }
+// Alternar entre modo claro y oscuro
+document.addEventListener("DOMContentLoaded", function() {
+    const themeBtn = document.getElementById("toggle-theme");
+    themeBtn.addEventListener("click", function() {
+        document.body.classList.toggle("light-mode");
+    });
+});
