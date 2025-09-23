@@ -1,16 +1,16 @@
 <aside>
     <h3>Información Adicional</h3>
     <p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
-    <button id="toggle-experience" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+    <button (click)="toggleExperience()" class="btn toggle-btn mb-3 w-100">
         <i class="fas fa-briefcase me-2"></i> Experiencia Laboral
     </button>
-    <button id="toggle-education" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+    <button (click)="toggleEducation()" class="btn toggle-btn mb-3 w-100">
         <i class="fas fa-graduation-cap me-2"></i> Educación
     </button>
-    <button id="toggle-contact" class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;">
+    <button (click)="toggleContact()" class="btn toggle-btn mb-3 w-100">
         <i class="fas fa-address-book me-2"></i> Información de Contacto
     </button>
-    <div class="social-buttons" id="contact-info" style="display:none;">
+    <div class="social-buttons" *ngIf="showContact">
         <a href="mailto:fabianmiranda2205@gmail.com" class="social-btn">
             <i class="fas fa-envelope"></i>
             <span>Correo</span>

@@ -11,12 +11,9 @@
 			<h2>Sobre Mí</h2>
 			<article>
 				<h3>Soft Skills</h3>
+				<input type="text" placeholder="Buscar skill..." [(ngModel)]="skillFilter" class="form-control mb-2" />
 				<ul>
-					<li>Trabajo en equipo</li>
-					<li>Comunicación</li>
-					<li>Adaptabilidad</li>
-					<li>Resolución de problemas</li>
-					<li>Gestión del tiempo</li>
+					<li *ngFor="let skill of softSkills | skillFilter:skillFilter">{{ skill }}</li>
 				</ul>
 			</article>
 			<article>
