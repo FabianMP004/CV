@@ -35,79 +35,27 @@
 					<div class="progress-bar" style="width: 70%; background-color:#32cd32;">70%</div>
 				</div>
 			</article>
-			<article>
-				<h3 class="mb-3">Lenguajes y Tecnologías</h3>
-				<div id="carouselSkills" class="carousel slide mb-4" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<div class="row justify-content-center">
-								<div class="col-6 text-center">
-									<h5>Python</h5>
-									<span class="badge bg-success">Lenguaje de Programación</span>
-								</div>
-								<div class="col-6 text-center">
-									<h5>JavaScript</h5>
-									<span class="badge bg-primary">Lenguaje de Programación</span>
+					<article>
+						<h3 class="mb-3">Lenguajes y Tecnologías</h3>
+						<div id="carouselSkills" class="carousel slide mb-4">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="row justify-content-center">
+										<div *ngFor="let skill of carouselItems[carouselIndex]" class="col-6 text-center">
+											<h5>{{ skill.name }}</h5>
+											<span class="badge" [ngClass]="skill.badgeClass">{{ skill.badge }}</span>
+										</div>
+									</div>
 								</div>
 							</div>
+							<button class="carousel-control-prev" type="button" (click)="prevCarousel()" aria-label="Anterior">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							</button>
+							<button class="carousel-control-next" type="button" (click)="nextCarousel()" aria-label="Siguiente">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							</button>
 						</div>
-						<div class="carousel-item">
-							<div class="row justify-content-center">
-								<div class="col-6 text-center">
-									<h5>SQL</h5>
-									<span class="badge bg-info text-dark">Lenguaje de Programación / Tecnología</span>
-								</div>
-								<div class="col-6 text-center">
-									<h5>HTML</h5>
-									<span class="badge bg-warning text-dark">Lenguaje de Programación</span>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row justify-content-center">
-								<div class="col-6 text-center">
-									<h5>CSS</h5>
-									<span class="badge bg-secondary">Lenguaje de Programación</span>
-								</div>
-								<div class="col-6 text-center">
-									<h5>Docker</h5>
-									<span class="badge bg-dark">Tecnología</span>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row justify-content-center">
-								<div class="col-6 text-center">
-									<h5>Postman</h5>
-									<span class="badge bg-secondary">Tecnología</span>
-								</div>
-								<div class="col-6 text-center">
-									<h5>Git</h5>
-									<span class="badge bg-warning text-dark">Tecnología</span>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="row justify-content-center">
-								<div class="col-6 text-center">
-									<h5>GitHub</h5>
-									<span class="badge bg-info text-dark">Tecnología</span>
-								</div>
-								<div class="col-6 text-center">
-									<h5>MongoDB</h5>
-									<span class="badge bg-primary">Tecnología</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselSkills" data-bs-slide="prev" aria-label="Anterior">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselSkills" data-bs-slide="next" aria-label="Siguiente">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					</button>
-				</div>
-			</article>
+					</article>
 		</section>
 	</div>
 </main>

@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './aside.css'
 })
 export class Aside {
+  showContact = false;
+  showEducation = true;
+  showExperience = true;
 
+  toggleContact() {
+    this.showContact = !this.showContact;
+  }
+
+  toggleEducation() {
+    this.showEducation = !this.showEducation;
+  }
+
+  toggleExperience() {
+    this.showExperience = !this.showExperience;
+  }
 }
