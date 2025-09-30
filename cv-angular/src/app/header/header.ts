@@ -41,12 +41,10 @@ export class HeaderComponent implements OnInit {
       alert('html2pdf.js no está cargado.');
       return;
     }
-    const header = document.querySelector('app-header');
-    const main = document.querySelector('app-main');
-    const pdfContainer = document.createElement('div');
-    pdfContainer.style.cssText = `background: white; padding: 20px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;`;
-    if (header) pdfContainer.appendChild(header.cloneNode(true));
-    if (main) pdfContainer.appendChild(main.cloneNode(true));
+  const header = document.querySelector('app-header');
+  const pdfContainer = document.createElement('div');
+  pdfContainer.style.cssText = `background: white; padding: 20px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;`;
+  if (header) pdfContainer.appendChild(header.cloneNode(true));
     const opt = {
       margin: [0.5, 0.5, 0.5, 0.5],
       filename: 'Fabian_Miranda_CV.pdf',

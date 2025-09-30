@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { SkillFilterPipe } from './skill-filter.pipe';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.html',
-  styleUrls: ['./main.css'],
-  standalone: true,
-  imports: [SkillFilterPipe]
+  selector: 'app-central',
+  imports: [],
+  templateUrl: './central.html',
+  styleUrl: './central.css'
 })
-export class MainComponent {
+export class Central {
   softSkills: string[] = [
     'Trabajo en equipo',
     'Comunicación',
