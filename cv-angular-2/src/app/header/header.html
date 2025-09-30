@@ -1,1 +1,27 @@
-<p>header works!</p>
+<!-- Greeting Popup -->
+<div id="greeting-popup" style="display:none;position:fixed;top:24px;left:24px;min-width:220px;max-width:90vw;z-index:9999;padding:10px 24px;background:#32cd32;color:#fff;text-align:center;font-size:1.1rem;font-weight:600;border-radius:12px;border:2px solid #218c21;box-shadow:0 2px 8px rgba(0,0,0,0.10);margin:0;">
+</div>
+<header>
+    <div class="hero-section">
+        <div class="hero-content-left">
+            <div class="hero-title">Desarrollador / Programador</div>
+            <h1 class="hero-name">Fabian Miranda<br>Prado</h1>
+            <div class="d-flex gap-2 flex-wrap justify-content-start align-items-center">
+                <button type="button" (click)="generatePDF()" class="btn btn-lg text-uppercase fw-bold rounded-3 mt-3 btn-brand">CV DOWNLOAD</button>
+            </div>
+        </div>
+        <div class="hero-center">
+            <div class="rounded-circle overflow-hidden border border-5 shadow" style="width:250px;height:250px;border-color:#32cd32;">
+                <img src="assets/images/Foto Perfil.png" alt="Fabian Miranda" class="w-100 h-100 object-fit-cover" />
+            </div>
+        </div>
+        <div class="hero-content-right">
+            <p class="about-text">¡Saludos! Soy Fabian Miranda, un desarrollador apasionado altamente capacitado en crear experiencias digitales intuitivas que combinan perfectamente la estética con la funcionalidad.</p>
+            <div class="availability">
+                <span class="availability-text">Dispoinble para trabajar</span>
+                <div class="availability-dot"></div>
+            </div>
+            <button id="toggle-theme" class="btn btn-secondary mt-3" style="font-weight:600;border-radius:10px;" (click)="toggleTheme()">Modo Claro/Oscuro</button>
+        </div>
+    </div>
+</header>
