@@ -1,0 +1,61 @@
+<main>
+	<div>
+		<section id="inicio">
+			<h2>Inicio</h2>
+			<article>
+				<h3>Bienvenido</h3>
+				<p>Esta es mi página web personal donde comparto información sobre mis proyectos y experiencia.</p>
+			</article>
+		</section>
+
+		<section id="sobre-mi">
+			<h2>Sobre Mí</h2>
+			<article>
+				<h3>Soft Skills</h3>
+				<ul>
+					<li>Trabajo en equipo</li>
+					<li>Comunicación</li>
+					<li>Adaptabilidad</li>
+					<li>Resolución de problemas</li>
+					<li>Gestión del tiempo</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Niveles de Habilidades</h3>
+				<div class="mb-2 small">Python</div>
+				<div class="progress mb-3" role="progressbar" aria-label="Python" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar" style="width: 85%; background-color:#32cd32;">85%</div>
+				</div>
+				<div class="mb-2 small">JavaScript</div>
+				<div class="progress mb-3" role="progressbar" aria-label="JavaScript" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar" style="width: 50%; background-color:#32cd32;">50%</div>
+				</div>
+				<div class="mb-2 small">SQL</div>
+				<div class="progress" role="progressbar" aria-label="SQL" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+					<div class="progress-bar" style="width: 70%; background-color:#32cd32;">70%</div>
+				</div>
+			</article>
+					<article>
+						<h3 class="mb-3">Lenguajes y Tecnologías</h3>
+						<div id="carouselSkills" class="carousel slide mb-4">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="row justify-content-center">
+										<div *ngFor="let skill of carouselItems[carouselIndex]" class="col-6 text-center">
+											<h5>{{ skill.name }}</h5>
+											<span class="badge" [ngClass]="skill.badgeClass">{{ skill.badge }}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" (click)="prevCarousel()" aria-label="Anterior">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							</button>
+							<button class="carousel-control-next" type="button" (click)="nextCarousel()" aria-label="Siguiente">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							</button>
+						</div>
+					</article>
+		</section>
+	</div>
+</main>
