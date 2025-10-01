@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-aside',
   imports: [CommonModule],
-  templateUrl: './aside.html',
-  styleUrl: './aside.css'
+  templateUrl: './aside.component.html',
+  styleUrl: './aside.component.css'
 })
 export class Aside {
   showContact = false;
