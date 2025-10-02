@@ -1,4 +1,23 @@
 <aside>
+	<h3>Navegación</h3>
+	<nav class="navigation-menu">
+		<a routerLink="/about" routerLinkActive="active" class="nav-link">
+			<i class="fas fa-user me-2"></i> Sobre Mí
+		</a>
+		<a routerLink="/skills" routerLinkActive="active" class="nav-link">
+			<i class="fas fa-code me-2"></i> Habilidades
+		</a>
+		<a routerLink="/experience" routerLinkActive="active" class="nav-link">
+			<i class="fas fa-briefcase me-2"></i> Experiencia
+		</a>
+		<a routerLink="/experience/jobs" routerLinkActive="active" class="nav-link sub-link">
+			<i class="fas fa-briefcase me-2"></i> Trabajos
+		</a>
+		<a routerLink="/experience/studies" routerLinkActive="active" class="nav-link sub-link">
+			<i class="fas fa-graduation-cap me-2"></i> Estudios
+		</a>
+	</nav>
+	
 	<h3>Información Adicional</h3>
 	<p>Aquí puedes encontrar enlaces útiles y recursos adicionales.</p>
 		<button class="btn toggle-btn mb-3 w-100" style="font-weight:600;border-radius:10px;background:#32cd32;color:#fff;border:2px solid #32cd32;transition:all 0.2s;" (click)="toggleExperience()">
