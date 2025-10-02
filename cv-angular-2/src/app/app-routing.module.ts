@@ -1,11 +1,13 @@
-import { Routes } from '@angular/router';
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about.component';
 import { SkillsComponent } from './skills.component';
 import { ExperienceComponent } from './experience.component';
 import { JobsComponent } from './jobs.component';
 import { StudiesComponent } from './studies.component';
 
-export const routes: Routes = [
+const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   {
@@ -16,6 +18,10 @@ export const routes: Routes = [
       { path: 'studies', component: StudiesComponent }
     ]
   },
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: '**', redirectTo: '/about' }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
