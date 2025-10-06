@@ -25,15 +25,31 @@ import { GitHubService, GitHubRepo } from '../github.service';
   `,
   styles: [`
     .projects { padding: 20px; }
-    h2 { margin-bottom: 12px; }
-    .hint { color: #666; margin-bottom: 16px; }
-    .state { color: #555; margin: 10px 0; }
+    h2 { margin-bottom: 12px; font-size: 2rem; color: #2a3a2a; }
+    .hint { color: #666; margin-bottom: 20px; }
+    .state { color: #555; margin: 12px 0; }
     .state.error { color: #b00020; }
-    .project-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .project-item { background: #f5f7f5; border: 1px solid #e0e6e0; border-radius: 8px; padding: 12px 14px; }
-    .project-item a { font-weight: 600; text-decoration: none; color: #1b5e20; }
+
+    .project-list { 
+      list-style: none; padding: 0; margin: 0; 
+      display: grid; gap: 16px; 
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .project-item { 
+      background: linear-gradient(180deg, #f8fbf8, #f1f5f1);
+      border: 1px solid #e0e6e0; 
+      border-radius: 12px; 
+      padding: 16px 18px; 
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .project-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+    }
+    .project-item a { font-weight: 700; text-decoration: none; color: #1b5e20; font-size: 1.05rem; }
     .project-item a:hover { text-decoration: underline; }
-    .meta { display: block; color: #555; margin-top: 6px; font-size: 0.9rem; }
+    .meta { display: block; color: #4a4a4a; margin-top: 8px; font-size: 0.92rem; }
   `]
 })
 export class ProjectsComponent implements OnInit {
