@@ -347,3 +347,4 @@ export class SpotifyComponent implements OnInit {
     this.topArtists$ = this.spotifyService.getTopArtists(5, 'medium_term');
   }
 }
+

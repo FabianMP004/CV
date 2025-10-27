@@ -210,3 +210,4 @@ export class SpotifyService {
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   }
 }
+
