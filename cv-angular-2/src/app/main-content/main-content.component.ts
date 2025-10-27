@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SpotifyComponent } from '../spotify/spotify.component';
 
 @Component({
   selector: 'app-main-content',
-  imports: [CommonModule],
+  imports: [CommonModule, SpotifyComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css'
 })

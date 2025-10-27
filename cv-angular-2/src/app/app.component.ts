@@ -3,9 +3,6 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header.component';
 import { Aside } from './aside/aside.component';
-import { MainContent } from './main-content/main-content.component';
-import { ToolsSkills } from './tools-skills/tools-skills.component';
-import { EducationExperience } from './education-experience/education-experience.component';
 import { Footer } from './footer/footer.component';
 
 @Component({
@@ -14,9 +11,6 @@ import { Footer } from './footer/footer.component';
     RouterOutlet,
     Header,
     Aside,
-    MainContent,
-    ToolsSkills,
-    EducationExperience,
     Footer
   ],
   templateUrl: './app.component.html',
