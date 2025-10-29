@@ -1,0 +1,140 @@
+aside {
+	grid-area: sidebar;
+	background: #2a3a2a;
+	padding: 25px;
+	border-radius: 12px;
+	height: fit-content;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+aside h3 {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+aside p, aside li {
+	color: #ffffff;
+	line-height: 1.6;
+}
+
+.social-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-top: 20px;
+	align-items: stretch;
+}
+
+.social-btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 12px;
+	background: #2a3a2a;
+	color: #ffffff;
+	padding: 15px 20px;
+	text-decoration: none;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	flex: 1;
+}
+
+.social-btn:hover {
+	background: #32cd32;
+	color: #ffffff;
+	border-color: #32cd32;
+	transform: translateY(-2px);
+}
+
+.social-btn i {
+	font-size: 20px;
+	width: 24px;
+	text-align: center;
+}
+
+.social-btn span {
+	font-size: 14px;
+}
+
+#toggle-contact {
+	font-weight:600;
+	border-radius:10px;
+	background:#32cd32;
+	color:#fff;
+	border:2px solid #32cd32;
+	transition:all 0.2s;
+}
+#toggle-contact:hover {
+	background:transparent;
+	color:#32cd32;
+	border:2px solid #218c21;
+	box-shadow:0 2px 8px rgba(50,205,50,0.15);
+	transform:translateY(-2px);
+}
+
+/* Estilos para el menú de navegación */
+.navigation-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+	background: #2a3a2a;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-size: 14px;
+}
+
+.nav-link:hover {
+	background: #32cd32;
+	color: #ffffff;
+	border-color: #32cd32;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(50, 205, 50, 0.3);
+}
+
+.nav-link.active {
+	background: #32cd32;
+	color: #ffffff;
+	border-color: #32cd32;
+	box-shadow: 0 2px 8px rgba(50, 205, 50, 0.4);
+}
+
+.nav-link.sub-link {
+	margin-left: 20px;
+	background: #1a2a1a;
+	font-size: 13px;
+	padding: 10px 16px;
+}
+
+.nav-link.sub-link:hover {
+	background: #2a5a2a;
+}
+
+.nav-link.sub-link.active {
+	background: #2a5a2a;
+}
+
+.nav-link i {
+	font-size: 16px;
+	width: 20px;
+	text-align: center;
+}

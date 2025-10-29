@@ -1,0 +1,60 @@
+main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 20px;
+	grid-template-areas: "content sidebar";
+}
+
+main > div {
+	grid-area: content;
+}
+
+section {
+	background: #2a3a2a;
+	padding: 25px;
+	border-radius: 12px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+section h2 {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+}
+
+article {
+	background: #2a3a2a;
+	padding: 20px;
+	margin-bottom: 15px;
+	border-radius: 8px;
+	border-left: 4px solid #32cd32;
+}
+
+article h3 {
+	color: #32cd32;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+}
+
+article p, article li {
+	color: #ffffff;
+	line-height: 1.6;
+}
+
+/* Carousel (usa Bootstrap, pero puedes personalizar si lo deseas) */
+#carouselSkills .carousel-inner {
+	width: 100%;
+}
+#carouselSkills .carousel-item {
+	padding: 10px 0;
+}
+#carouselSkills .badge {
+	font-size: 0.95rem;
+	margin-top: 8px;
+}

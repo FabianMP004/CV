@@ -1,0 +1,12 @@
+footer {
+	background: #2a3a2a;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+	border-radius: 12px;
+	margin-top: 20px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
